@@ -57,6 +57,7 @@ const fetchProvincesData = async () => {
     fireEvent.click(screen.getByText('Territories'));
     const territoriesData = await fetchTerritoriesData();
     const firstTerritoryName = territoriesData[0].name;
+    console.log(firstTerritoryName)
     await waitFor(() => {
       expect(screen.getByText(firstTerritoryName)).toBeInTheDocument();
     });
